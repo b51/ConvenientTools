@@ -1,0 +1,5 @@
+路径：HKEY_CURRENT_USER\Control Panel\Input Method\Hot Keys\00000011
+
+键：Key Modifiers，Target IME，Virtual Key
+
+将以上3个键值全部修改为0，则快捷键为（无）
