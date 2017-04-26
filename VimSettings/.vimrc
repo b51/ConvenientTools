@@ -103,7 +103,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "****************************************
         "airline settings
 "****************************************
-let g:airline_theme="papercolor"
+let g:airline_theme="hybridline"
 set laststatus=2
 set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
@@ -143,9 +143,9 @@ syntax on
 "colorscheme solarized
 colorscheme delek 
 
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set cindent
 set expandtab
 set autochdir
