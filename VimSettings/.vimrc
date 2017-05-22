@@ -169,5 +169,6 @@ set smartcase
 set smartindent
 set pastetoggle=<F12>
 let g:indentLine_char = '︙'
+set tags=./tags,tags;
 set runtimepath^=~/.vim/bundle/ag
 set complete=.,w,b,u,t
