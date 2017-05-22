@@ -132,6 +132,21 @@ let g:tagbar_width=35
 let g:tagbar_autofocus=1
 nmap <F6> :TagbarToggle<CR>
 
+"****************************************
+        "ctrlp settings:
+"****************************************
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
+
+let g:ag_working_path_mode="r"
+
 set nu
 set hlsearch
 set noautoindent
@@ -154,3 +169,4 @@ set smartcase
 set smartindent
 set pastetoggle=<F12>
 let g:indentLine_char = '︙'
+set runtimepath^=~/.vim/bundle/ag

@@ -28,6 +28,14 @@
     uri: https://github.com/vim-airline/vim-airline-themes.git
     version: master
 - git:
+    local-name: ag
+    uri: https://github.com/rking/ag.vim.git
+    version: master
+- git:
+    local-name: ctrlp
+    uri: https://github.com/kien/ctrlp.vim.git
+    version: master
+- git:
     local-name: jedi-vim
     uri: https://github.com/davidhalter/jedi-vim.git
     version: master
