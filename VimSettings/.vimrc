@@ -170,3 +170,4 @@ set smartindent
 set pastetoggle=<F12>
 let g:indentLine_char = '︙'
 set runtimepath^=~/.vim/bundle/ag
+set complete=.,w,b,u,t
