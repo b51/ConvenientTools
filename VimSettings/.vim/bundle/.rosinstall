@@ -8,7 +8,7 @@
     uri: https://github.com/scrooloose/nerdtree.git
     version: master
 - git:
-    local-name: rename.vim
+    local-name: rename
     uri: https://github.com/danro/rename.vim.git
     version: master
 - git:
