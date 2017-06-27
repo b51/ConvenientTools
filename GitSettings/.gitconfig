@@ -3,3 +3,7 @@
 [user]
 	name = b51
 	email = b51live@gmail.com
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
