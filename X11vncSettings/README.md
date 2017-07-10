@@ -3,7 +3,7 @@
 	sudo x11vnc -storepasswd
 
 ## Auto start
-	cp x11vnc.service to /lib/systemd/system/
+	cp x11vnc.service /lib/systemd/system/
 	sudo ufw allow 5900
 	sudo systemctl enable x11vnc.service
 	sudo systemctl daemon-reload
