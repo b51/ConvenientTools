@@ -1,1 +1,1 @@
-# Some Software's configuration 
+# Some software's configuration 
