@@ -165,32 +165,6 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 nmap<F6> :SyntasticCheck<CR>
 
-"****************************************
-        "syntastic settings:
-"****************************************
-"Highlighting of class scope is disabled by default. To enable set
-let g:cpp_class_scope_highlight = 1
-"Highlighting of member variables is disabled by default. To enable set
-let g:cpp_member_variable_highlight = 1
-"Highlighting of class names in declarations is disabled by default. To enable
-"set
-let g:cpp_class_decl_highlight = 1
-"There are two ways to hightlight template functions. Either
-let g:cpp_experimental_simple_template_highlight = 1
-"which works in most cases, but can be a little slow on large files.
-"Alternatively set
-"let g:cpp_experimental_template_highlight = 0
-"which is a faster implementation but has some corner cases where it doesn't
-"work.
-
-"Highlighting of library concepts is enabled by
-let g:cpp_concepts_highlight = 1
-"This will highlight the keywords concept and requires as well as all named
-"requirements (like DefaultConstructible) in the standard library.
-
-"Highlighting of user defined functions can be disabled by
-let g:cpp_no_function_highlight = 1
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
 
@@ -203,7 +177,8 @@ syntax on
 
 "set background=light
 "colorscheme solarized
-colorscheme delek
+"colorscheme delek
+colorscheme dracula
 "let base16colorspace=256
 "colorscheme base16-default-dark
 
