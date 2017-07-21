@@ -80,7 +80,7 @@ map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 "****************************************
         "NERDTREE config"
 "****************************************
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 wincmd w
 autocmd vimenter * wincmd w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -130,7 +130,7 @@ let g:airline_symbols_branch = '⎇'
 "****************************************
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
-nmap <F6> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 "****************************************
         "ctrlp settings:
@@ -139,13 +139,60 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+
+"****************************************
+        "ag settings:
+"****************************************
+let g:ag_working_path_mode="r"
+nmap <F2> :Ag! --noaffinity<space>
+
+"****************************************
+        "syntastic settings:
+"****************************************
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+nmap<F6> :SyntasticCheck<CR>
+
+"****************************************
+        "syntastic settings:
+"****************************************
+"Highlighting of class scope is disabled by default. To enable set
+let g:cpp_class_scope_highlight = 1
+"Highlighting of member variables is disabled by default. To enable set
+let g:cpp_member_variable_highlight = 1
+"Highlighting of class names in declarations is disabled by default. To enable
+"set
+let g:cpp_class_decl_highlight = 1
+"There are two ways to hightlight template functions. Either
+let g:cpp_experimental_simple_template_highlight = 1
+"which works in most cases, but can be a little slow on large files.
+"Alternatively set
+"let g:cpp_experimental_template_highlight = 0
+"which is a faster implementation but has some corner cases where it doesn't
+"work.
+
+"Highlighting of library concepts is enabled by
+let g:cpp_concepts_highlight = 1
+"This will highlight the keywords concept and requires as well as all named
+"requirements (like DefaultConstructible) in the standard library.
+
+"Highlighting of user defined functions can be disabled by
+let g:cpp_no_function_highlight = 1
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
-
-let g:ag_working_path_mode="r"
 
 set nu
 set hlsearch
@@ -156,7 +203,9 @@ syntax on
 
 "set background=light
 "colorscheme solarized
-colorscheme delek 
+colorscheme delek
+"let base16colorspace=256
+"colorscheme base16-default-dark
 
 set shiftwidth=2
 set softtabstop=2
@@ -169,6 +218,5 @@ set smartcase
 set smartindent
 set pastetoggle=<F12>
 let g:indentLine_char = '︙'
-set tags=./tags,tags;
 set runtimepath^=~/.vim/bundle/ag
 set complete=.,w,b,u,t
