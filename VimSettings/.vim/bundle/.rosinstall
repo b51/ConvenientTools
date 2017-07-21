@@ -44,6 +44,10 @@
     uri: https://github.com/octol/vim-cpp-enhanced-highlight
     version: master
 - git:
+    local-name: base16-vim
+    uri: https://github.com/chriskempson/base16-vim
+    version: master
+- git:
     local-name: jedi-vim
     uri: https://github.com/davidhalter/jedi-vim.git
     version: master
