@@ -103,7 +103,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "****************************************
         "airline settings
 "****************************************
-let g:airline_theme="hybridline"
+"let g:airline_theme="hybridline"
+let g:airline_theme="dracula"
 set laststatus=2
 set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
@@ -158,6 +159,7 @@ nmap <F2> :Ag! --noaffinity<space>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+nmap<F12> :lclose<CR>
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
