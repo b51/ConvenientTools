@@ -27,9 +27,9 @@ endif
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
@@ -159,13 +159,12 @@ nmap <F2> :Ag! --noaffinity<space>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-nmap<F12> :lclose<CR>
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
-nmap<F6> :SyntasticCheck<CR>
+nmap<F10> :SyntasticToggleMode<CR>
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
@@ -177,12 +176,8 @@ set ruler
 syntax enable
 syntax on
 
-"set background=light
-"colorscheme solarized
 "colorscheme delek
 colorscheme dracula
-"let base16colorspace=256
-"colorscheme base16-default-dark
 
 set shiftwidth=2
 set softtabstop=2
@@ -195,5 +190,6 @@ set smartcase
 set smartindent
 set pastetoggle=<F12>
 let g:indentLine_char = '︙'
+set tags=./tags,tags;
 set runtimepath^=~/.vim/bundle/ag
 set complete=.,w,b,u,t
