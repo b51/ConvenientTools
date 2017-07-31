@@ -55,3 +55,7 @@
     local-name: jedi-vim
     uri: https://github.com/davidhalter/jedi-vim.git
     version: master
+- git:
+    local-name: YouCompleteMe
+    uri: https://github.com/Valloric/YouCompleteMe
+    version: master
