@@ -167,6 +167,13 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 nmap<F10> :SyntasticToggleMode<CR>
 
+function! SetupPython()
+  setlocal softtabstop=2
+  setlocal tabstop=2
+  setlocal shiftwidth=2
+endfunction
+command! -bar SetupPython call SetupPython()
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
 
