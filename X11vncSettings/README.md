@@ -3,7 +3,7 @@
 	sudo x11vnc -storepasswd
 
 ## Auto start
-  Make Sure the Passwd Path Has Been Set Correctly.
+	Make Sure the Passwd Path Has Been Set Correctly.
 	cp x11vnc.service /lib/systemd/system/
 	sudo ufw allow 5900
 	sudo systemctl enable x11vnc.service
