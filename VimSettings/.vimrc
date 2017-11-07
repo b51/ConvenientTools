@@ -55,6 +55,71 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 "****************************************
+        "New file title
+"****************************************
+autocmd BufNewFile *.py call SetPythonHeader()
+autocmd BufNewFile *.hpp,*.cpp,*.[ch],*.sh,*.java call SetHeader()
+let $author_name = "b51"
+let $author_email = "b51live@gmail.com"
+
+func SetHeader()
+  "*.sh
+  if &filetype == 'sh'
+    call setline(1,"\#########################################################################")
+    call append(line("."), "\#")
+    call append(line(".")+1, "\#              Author: ".$author_name)
+    call append(line(".")+2, "\#                Mail: ".$author_email)
+    call append(line(".")+3, "\#            FileName: ".expand("%:t"))
+    call append(line(".")+4, "\#")
+    call append(line(".")+5, "\#          Created On: ".strftime("%c"))
+    call append(line(".")+6, "\#")
+    call append(line(".")+7, "\#########################################################################")
+    call append(line(".")+8, "")
+    call append(line(".")+9, "\#!/bin/bash")
+    call append(line(".")+10, "")
+  else
+    call setline(1,"/*************************************************************************")
+    call append(line("."), "\*")
+    call append(line(".")+1, "\*              Author: ".$author_name)
+    call append(line(".")+2, "\*                Mail: ".$author_email)
+    call append(line(".")+3, "\*            FileName: ".expand("%:t"))
+    call append(line(".")+4, "\*")
+    call append(line(".")+5, "\*          Created On: ".strftime("%c"))
+    call append(line(".")+6, "\*")
+    call append(line(".")+7, "************************************************************************/")
+    call append(line(".")+8, "")
+  endif
+  "*.cpp
+  if &filetype == 'cpp'
+    call append(line(".")+9, "#include<iostream>")
+    call append(line(".")+10, "")
+  endif
+  "*.c
+  if &filetype == 'c'
+    call append(line(".")+9, "#include<stdio.h>")
+    call append(line(".")+10, "")
+  endif
+  "Goto end of file
+  autocmd BufNewFile * normal G
+endfunc
+
+func SetPythonHeader()
+  call setline(1,"\#########################################################################")
+  call append(line("."), "\#")
+  call append(line(".")+1, "\#              Author: ".$author_name)
+  call append(line(".")+2, "\#                Mail: ".$author_email)
+  call append(line(".")+3, "\#            FileName: ".expand("%:t"))
+  call append(line(".")+4, "\#")
+  call append(line(".")+5, "\#          Created On: ".strftime("%c"))
+  call append(line(".")+6, "\#")
+  call append(line(".")+7, "\#########################################################################")
+  call append(line(".")+8, "")
+  call append(line(".")+9, "\#!/usr/bin/env python")
+  call append(line(".")+10, "")
+  autocmd BufNewFile * normal G
+endfunc
+
+"****************************************
         "taglist config
 "****************************************
 if getfsize(".vimscript")>0
