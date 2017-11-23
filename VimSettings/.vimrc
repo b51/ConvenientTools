@@ -91,12 +91,12 @@ func SetHeader()
   endif
   "*.cpp
   if &filetype == 'cpp'
-    call append(line(".")+9, "#include<iostream>")
+    call append(line(".")+9, "#include <iostream>")
     call append(line(".")+10, "")
   endif
   "*.c
   if &filetype == 'c'
-    call append(line(".")+9, "#include<stdio.h>")
+    call append(line(".")+9, "#include <stdio.h>")
     call append(line(".")+10, "")
   endif
   "Goto end of file
