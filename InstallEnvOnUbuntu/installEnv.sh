@@ -24,7 +24,7 @@ sudo apt dist-upgrade -y
 
 # Install
 /bin/echo -e "\e[1;32mInstall Something.\e[0m"
-sudo apt-get install ssh vim git silversearcher-ag x11vnc python-wstool build-essential -y
+sudo apt-get install ssh vim git tree silversearcher-ag x11vnc python-wstool build-essential -y
 
 # Vim settings
 /bin/echo -e "\e[1;32mSetting Vim.\e[0m"
