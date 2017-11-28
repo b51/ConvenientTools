@@ -28,8 +28,8 @@ sudo apt-get install ssh vim git tree htop silversearcher-ag exuberant-ctags x11
 
 # Vim settings
 /bin/echo -e "\e[1;32mSetting Vim.\e[0m"
-cp $DIRROOT
-cp VimSettings/.vim* $HOME
+cd $DIRROOT
+cp -r VimSettings/.vim* $HOME
 cd $HOME/.vim/bundle/
 wstool update
 cd YouCompleteMe
