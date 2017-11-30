@@ -51,7 +51,7 @@ rosdep update
 
 tee -a ~/.bashrc > /dev/null <<'EOF'
 source /opt/ros/kinetic/setup.bash
-ros_ip=`ifconfig wlan0` | grep "inet addr" | awk -F : "{print $2}" | awk "{print $1}"
+ros_ip=`ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
 export ROS_IP=$ros_ip
 EOF
 
