@@ -1,0 +1,3 @@
+[submodule "scripts/move_window"]
+	path = scripts/move_window
+	url = https://github.com/SirVer/move_window
