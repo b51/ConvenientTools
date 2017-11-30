@@ -58,6 +58,15 @@ EOF
 source ~/.bashrc
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools -y
 
+#Disable system problem report when login
+/bin/echo -e "\e[1;32mDisable system problem report when login.\e[0m"
+sudo tee -a /etc/default/apport > /dev/null <<'EOF'
+# set this to 0 to disable apport, or to 1 to enable it
+# you can temporarily override this with
+# sudo service apport start force_start=1
+enabled=0
+EOF
+
 # Caps Ctrl exchange
 /bin/echo -e "\e[1;32mMaking Caps as Ctrl.\e[0m"
 sudo tee -a /etc/default/keyboard > /dev/null <<'EOF'
