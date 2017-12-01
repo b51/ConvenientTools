@@ -85,19 +85,20 @@ func SetHeader()
     call append(line(".")+3, "\*            FileName: ".expand("%:t"))
     call append(line(".")+4, "\*")
     call append(line(".")+5, "\*          Created On: ".strftime("%c"))
-    call append(line(".")+6, "\*")
-    call append(line(".")+7, "************************************************************************/")
-    call append(line(".")+8, "")
+    call append(line(".")+6, "\*     Licensed under The MIT License [see LICENSE for details]")
+    call append(line(".")+7, "\*")
+    call append(line(".")+8, "************************************************************************/")
+    call append(line(".")+9, "")
   endif
   "*.cpp
   if &filetype == 'cpp'
-    call append(line(".")+9, "#include <iostream>")
-    call append(line(".")+10, "")
+    call append(line(".")+10, "#include <iostream>")
+    call append(line(".")+11, "")
   endif
   "*.c
   if &filetype == 'c'
-    call append(line(".")+9, "#include <stdio.h>")
-    call append(line(".")+10, "")
+    call append(line(".")+10, "#include <stdio.h>")
+    call append(line(".")+11, "")
   endif
   "Goto end of file
   autocmd BufNewFile * normal G
@@ -111,11 +112,12 @@ func SetPythonHeader()
   call append(line(".")+3, "\#            FileName: ".expand("%:t"))
   call append(line(".")+4, "\#")
   call append(line(".")+5, "\#          Created On: ".strftime("%c"))
-  call append(line(".")+6, "\#")
-  call append(line(".")+7, "\#########################################################################")
-  call append(line(".")+8, "")
-  call append(line(".")+9, "\#!/usr/bin/env python")
-  call append(line(".")+10, "")
+  call append(line(".")+6, "\#     Licensed under The MIT License [see LICENSE for details]")
+  call append(line(".")+7, "\#")
+  call append(line(".")+8, "\#########################################################################")
+  call append(line(".")+9, "")
+  call append(line(".")+10, "\#!/usr/bin/env python")
+  call append(line(".")+11, "")
   autocmd BufNewFile * normal G
 endfunc
 
