@@ -58,7 +58,7 @@ endif
         "New file title
 "****************************************
 autocmd BufNewFile *.py call SetPythonHeader()
-autocmd BufNewFile *.hpp,*.cpp,*.[ch],*.sh,*.java call SetHeader()
+autocmd BufNewFile *.hpp,*.cpp,,*.cc,*.[ch],*.sh,*.java call SetHeader()
 let $author_name = "b51"
 let $author_email = "b51live@gmail.com"
 
@@ -92,6 +92,11 @@ func SetHeader()
   endif
   "*.cpp
   if &filetype == 'cpp'
+    call append(line(".")+10, "#include <iostream>")
+    call append(line(".")+11, "")
+  endif
+  "*.cc
+  if &filetype == 'cc'
     call append(line(".")+10, "#include <iostream>")
     call append(line(".")+11, "")
   endif
