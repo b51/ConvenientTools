@@ -239,6 +239,12 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 nmap<F10> :SyntasticToggleMode<CR>
 
+"****************************************
+        "markdown preview:
+"****************************************
+nmap <F9>o :MarkdownPreview<CR>
+nmap <F9>q :MarkdownPreviewStop<CR>
+
 function! SetupPython()
   setlocal softtabstop=2
   setlocal tabstop=2

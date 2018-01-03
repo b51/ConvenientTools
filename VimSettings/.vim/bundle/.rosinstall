@@ -56,6 +56,10 @@
     uri: https://github.com/kshenoy/vim-signature
     version: master
 - git:
+    local-name: markdown-preview.vim
+    uri: https://github.com/iamcco/markdown-preview.vim
+    version: master
+- git:
     local-name: jedi-vim
     uri: https://github.com/davidhalter/jedi-vim.git
     version: master
