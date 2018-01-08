@@ -24,7 +24,7 @@ sudo apt dist-upgrade -y
 
 # Install
 /bin/echo -e "\e[1;32mInstall Something.\e[0m"
-sudo apt-get install ssh vim git tree htop silversearcher-ag exuberant-ctags x11vnc python-pip python-wstool build-essential libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
+sudo apt-get install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags x11vnc python-pip python-wstool build-essential libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
 
 # Vim settings
 /bin/echo -e "\e[1;32mSetting Vim.\e[0m"
