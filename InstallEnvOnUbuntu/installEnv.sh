@@ -32,6 +32,7 @@ cd $DIRROOT
 cp -r VimSettings/.vim* $HOME
 cd $HOME/.vim/bundle/
 wstool update
+#cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
 cd YouCompleteMe
 python install.py
 
