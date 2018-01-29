@@ -45,7 +45,7 @@
     version: master
 - git:
     local-name: dracula-theme
-    uri: https://github.com/dracula/vim.git
+    uri: https://github.com/b51/vim-dracula-theme
     version: master
 - git:
     local-name: base16-vim
