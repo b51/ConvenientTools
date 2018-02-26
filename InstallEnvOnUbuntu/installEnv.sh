@@ -24,7 +24,7 @@ sudo apt dist-upgrade -y
 
 # Install
 /bin/echo -e "\e[1;32mInstall Something.\e[0m"
-sudo apt-get install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags x11vnc python-pip python-wstool build-essential libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
+sudo apt-get install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags x11vnc python-pip python-wstool build-essential libgoogle-glog-dev libprotobuf-dev libleveldb-dev tmux -y
 
 # Vim settings
 /bin/echo -e "\e[1;32mSetting Vim.\e[0m"
@@ -41,6 +41,11 @@ python install.py
 /bin/echo -e "\e[1;32mSetting Git.\e[0m"
 cd $DIRROOT
 cp GitSettings/.gitconfig $HOME
+
+# Tmux settings
+/bin/echo -e "\e[1;32mSetting Tmux.\e[0m"
+cd $DIRROOT
+cp TmuxSettings/.tmux.conf $HOME
 
 # Install ROS
 /bin/echo -e "\e[1;32mInstalling ROS Kinetic.\e[0m"
