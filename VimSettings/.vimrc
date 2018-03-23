@@ -110,19 +110,18 @@ func SetHeader()
 endfunc
 
 func SetPythonHeader()
-  call setline(1,"\#########################################################################")
-  call append(line("."), "\#")
-  call append(line(".")+1, "\#              Author: ".$author_name)
-  call append(line(".")+2, "\#                Mail: ".$author_email)
-  call append(line(".")+3, "\#            FileName: ".expand("%:t"))
-  call append(line(".")+4, "\#")
-  call append(line(".")+5, "\#          Created On: ".strftime("%c"))
-  call append(line(".")+6, "\#     Licensed under The MIT License [see LICENSE for details]")
-  call append(line(".")+7, "\#")
-  call append(line(".")+8, "\#########################################################################")
-  call append(line(".")+9, "")
-  call append(line(".")+10, "\#!/usr/bin/env python")
-  call append(line(".")+11, "")
+  call setline(1,"\#!/usr/bin/env python")
+  call append(line("."), "\#########################################################################")
+  call append(line(".")+1, "\#")
+  call append(line(".")+2, "\#              Author: ".$author_name)
+  call append(line(".")+3, "\#                Mail: ".$author_email)
+  call append(line(".")+4, "\#            FileName: ".expand("%:t"))
+  call append(line(".")+5, "\#")
+  call append(line(".")+6, "\#          Created On: ".strftime("%c"))
+  call append(line(".")+7, "\#     Licensed under The MIT License [see LICENSE for details]")
+  call append(line(".")+8, "\#")
+  call append(line(".")+9, "\#########################################################################")
+  call append(line(".")+10, "")
   autocmd BufNewFile * normal G
 endfunc
 
@@ -229,16 +228,16 @@ nmap <F2> :Ag! --noaffinity<space>
 "****************************************
         "syntastic settings:
 "****************************************
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers = ['pyflakes']
-nmap<F10> :SyntasticToggleMode<CR>
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 1
+"let g:syntastic_python_checkers = ['pyflakes']
+"nmap<F10> :SyntasticToggleMode<CR>
 
 "****************************************
         "markdown preview:
