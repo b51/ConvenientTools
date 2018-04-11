@@ -7,3 +7,6 @@
 	tool = vimdiff
 [core]
 	editor = vim
+
+[url "ssh://git@gitlab.xxx.com"]
+      insteadOf = https://xx.xxx.xxx.xxx
