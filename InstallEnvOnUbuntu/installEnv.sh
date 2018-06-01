@@ -17,8 +17,8 @@ PWD=`pwd`
 DIRROOT=$PWD/..
 
 # Remove libreoffice
-/bin/echo -e "\e[1;32mRemove libreoffice.\e[0m"
-sudo apt remove libreoffice-common libreoffice-core -y
+/bin/echo -e "\e[1;32mRemove libreoffice and thunderbird.\e[0m"
+sudo apt remove libreoffice-common libreoffice-core thunderbird --purge -y
 sudo apt update -y
 sudo apt dist-upgrade -y
 
