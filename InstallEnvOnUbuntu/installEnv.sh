@@ -31,8 +31,8 @@ sudo apt-get install ssh cmake vim git tree htop silversearcher-ag exuberant-cta
 cd $DIRROOT
 cp -r VimSettings/.vim* $HOME
 cd $HOME/.vim/bundle/
-wstool update
-#cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
+#wstool update
+cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
 cd dracula-theme && git remote add upstream https://github.com/dracula/vim && cd ..
 cd YouCompleteMe
 python install.py
