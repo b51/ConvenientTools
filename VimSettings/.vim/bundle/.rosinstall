@@ -36,6 +36,10 @@
     uri: https://github.com/ctrlpvim/ctrlp.vim
     version: master
 - git:
+    local-name: ctrlp-funky
+    uri: https://github.com/tacahiroy/ctrlp-funky
+    version: master
+- git:
     local-name: syntastic
     uri: https://github.com/vim-syntastic/syntastic.git
     version: master
@@ -46,6 +50,10 @@
 - git:
     local-name: dracula-theme
     uri: https://github.com/b51/vim-dracula-theme
+    version: master
+- git:
+    local-name: molokai
+    uri: https://github.com/tomasr/molokai
     version: master
 - git:
     local-name: base16-vim
