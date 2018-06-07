@@ -213,11 +213,13 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
-let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+"let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
 "****************************************
         "ag settings:
@@ -252,9 +254,6 @@ function! SetupPython()
 endfunction
 command! -bar SetupPython call SetupPython()
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
-
 set nu
 set hlsearch
 set noautoindent
@@ -263,7 +262,9 @@ syntax enable
 syntax on
 
 "colorscheme delek
-colorscheme dracula
+"colorscheme dracula
+"colorscheme solarized
+colorscheme molokai
 
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 
