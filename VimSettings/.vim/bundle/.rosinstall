@@ -33,7 +33,7 @@
     version: master
 - git:
     local-name: ctrlp
-    uri: https://github.com/kien/ctrlp.vim.git
+    uri: https://github.com/ctrlpvim/ctrlp.vim
     version: master
 - git:
     local-name: syntastic
