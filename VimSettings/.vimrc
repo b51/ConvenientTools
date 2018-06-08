@@ -132,13 +132,29 @@ if getfsize(".vimscript")>0
     source .vimscript
 endif
 
-"let Tlist_Exit_OnlyWindow=1
+let Tlist_Exit_OnlyWindow=1
 "let Tlist_Auto_Open=1
-"let Tlist_File_Fold_Auto_Close=1
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Use_Right_Window=1
+nnoremap <silent> <F8> :TlistToggle<CR>
 
 "****************************************
         "cscope config
 "****************************************
+function! LoadCscope()
+  let db = findfile("cscope.out", ".;")
+  if (!empty(db))
+    let path = strpart(db, 0, match(db, "/cscope.out$"))
+    set nocscopeverbose " suppress 'duplicate connection' error
+    exe "cs add " . db . " " . path
+    set cscopeverbose
+  " else add the database pointed to by environment variable
+  elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+  endif
+endfunction
+au BufEnter /* call LoadCscope()
+
 nmap <F5>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <F5>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <F5>d :cs find d <C-R>=expand("<cword>")<CR><CR>
@@ -147,6 +163,7 @@ nmap <F5>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 nmap <F5>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <F5>I :cs find i <C-R>=expand("<cfile>")<CR><CR>
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+nnoremap <C-]> g<C-]>
 
 "****************************************
         "NERDTREE config"
@@ -201,9 +218,9 @@ let g:airline_symbols_branch = '⎇'
 "****************************************
         "tagbar settings
 "****************************************
-let g:tagbar_width=35
-let g:tagbar_autofocus=1
-nmap <F8> :TagbarToggle<CR>
+"let g:tagbar_width=35
+"let g:tagbar_autofocus=1
+"nmap <F8> :TagbarToggle<CR>
 
 "****************************************
         "ctrlp settings:
@@ -253,9 +270,9 @@ nmap <F9>o :MarkdownPreview<CR>
 nmap <F9>q :MarkdownPreviewStop<CR>
 
 function! SetupPython()
-  setlocal softtabstop=2
-  setlocal tabstop=2
-  setlocal shiftwidth=2
+  setlocal softtabstop=4
+  setlocal tabstop=4
+  setlocal shiftwidth=4
 endfunction
 command! -bar SetupPython call SetupPython()
 
