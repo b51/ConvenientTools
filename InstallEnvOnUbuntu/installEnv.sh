@@ -36,6 +36,10 @@ cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --
 cd dracula-theme && git remote add upstream https://github.com/dracula/vim && cd ..
 cd YouCompleteMe
 python install.py
+# Alias csfiles to generate cscope.files
+tee -a ~/.bashrc > /dev/null <<'EOF'
+alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
+EOF
 
 # Git settings
 /bin/echo -e "\e[1;32mSetting Git.\e[0m"
