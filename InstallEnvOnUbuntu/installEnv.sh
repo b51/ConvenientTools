@@ -35,7 +35,7 @@ cd $HOME/.vim/bundle/
 cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
 cd dracula-theme && git remote add upstream https://github.com/dracula/vim && cd ..
 cd YouCompleteMe
-python install.py
+python3 install.py --clang-completer
 # Alias csfiles to generate cscope.files
 tee -a ~/.bashrc > /dev/null <<'EOF'
 alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
