@@ -309,3 +309,5 @@ let g:indentLine_char = '︙'
 set tags=./tags,tags;
 set runtimepath^=~/.vim/bundle/ag
 set complete=.,w,b,u,t
+
+set encoding=utf-8
