@@ -16,15 +16,20 @@
 PWD=`pwd`
 DIRROOT=$PWD/..
 
-# Remove libreoffice
+# Remove Useless
 /bin/echo -e "\e[1;32mRemove libreoffice and thunderbird.\e[0m"
 sudo apt remove libreoffice-common libreoffice-core thunderbird --purge -y
 sudo apt update -y
-sudo apt dist-upgrade -y
 
-# Install
-/bin/echo -e "\e[1;32mInstall Something.\e[0m"
-sudo apt-get install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags x11vnc python-pip python-wstool build-essential libgoogle-glog-dev libprotobuf-dev libleveldb-dev tmux -y
+# Installing Tools
+/bin/echo -e "\e[1;32mInstalling Tools.\e[0m"
+sudo apt install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags x11vnc tmux build-essential -y
+
+# Installing Others
+/bin/echo -e "\e[1;32mInstalling Others.\e[0m"
+sudo apt install python-pip python-rosinstall python-rosinstall-generator python-catkin-tools python-wstool libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
+
+sudo apt dist-upgrade -y
 
 # Vim settings
 /bin/echo -e "\e[1;32mSetting Vim.\e[0m"
@@ -50,24 +55,6 @@ cp GitSettings/.gitconfig $HOME
 /bin/echo -e "\e[1;32mSetting Tmux.\e[0m"
 cd $DIRROOT
 cp TmuxSettings/.tmux.conf $HOME
-
-# Install ROS
-/bin/echo -e "\e[1;32mInstalling ROS Kinetic.\e[0m"
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-sudo apt-get update -y
-sudo apt-get install ros-kinetic-desktop -y
-sudo rosdep init
-rosdep update
-
-tee -a ~/.bashrc > /dev/null <<'EOF'
-source /opt/ros/kinetic/setup.bash
-ros_ip=`ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
-export ROS_IP=$ros_ip
-EOF
-
-source ~/.bashrc
-sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools -y
 
 #Disable system problem report when login
 /bin/echo -e "\e[1;32mDisable system problem report when login.\e[0m"
