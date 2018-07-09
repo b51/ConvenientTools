@@ -276,6 +276,34 @@ function! SetupPython()
 endfunction
 command! -bar SetupPython call SetupPython()
 
+"****************************************
+            "vimwiki"
+"****************************************
+let g:vimwiki_list = [{'path': '~/Documents/VimWiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
+au BufRead, BufNewFile *.wiki set filetype=vimwiki
+function! ToggleCalendar()
+  execute ":Calendar"
+  if exists("g:calendar_open")
+    if g:calendar_open == 1
+      execute "q"
+      unlet g:calendar_open
+    else
+      g:calendar_open = 1
+    end
+  else
+    let g:calendar_open = 1
+  end
+endfunction
+:autocmd FileType vimwiki map <Leader>c :call ToggleCalendar()<CR>
+:nnoremap <F7> "=strftime("%Y-%m-%d")<CR>P
+:inoremap <F7>t <C-R>=strftime("%Y-%m-%d")<CR>
+":autocmd FileType vimwiki map c :Calendar<CR>
+
+"****************************************
+            "Calendar"
+"****************************************
+autocmd bufenter * if (winnr("$") == 1 && exists("b:Calendar")) | q | endif
+
 set nu
 set hlsearch
 set noautoindent
@@ -307,7 +335,7 @@ set smartindent
 set pastetoggle=<F12>
 let g:indentLine_char = '︙'
 set tags=./tags,tags;
-set runtimepath^=~/.vim/bundle/ag
+set runtimepath^=~/.vim/bundle/ag.vim
 set complete=.,w,b,u,t
 
 set encoding=utf-8
