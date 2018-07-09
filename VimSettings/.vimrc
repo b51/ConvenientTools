@@ -155,13 +155,13 @@ function! LoadCscope()
 endfunction
 au BufEnter /* call LoadCscope()
 
-nmap <F5>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <F5>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <F5>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <F5>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <F5>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <F5>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <F5>I :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <Leader>I :cs find i <C-R>=expand("<cfile>")<CR><CR>
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 nnoremap <C-]> g<C-]>
 
