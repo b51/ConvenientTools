@@ -44,6 +44,8 @@ python3 install.py --clang-completer
 # Alias csfiles to generate cscope.files
 tee -a ~/.bashrc > /dev/null <<'EOF'
 alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
+
+export TERM=xterm-256color
 EOF
 
 # Git settings
