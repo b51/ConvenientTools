@@ -83,3 +83,11 @@
     local-name: calendar-vim
     uri: https://github.com/mattn/calendar-vim
     version: master
+- git:
+    local-name: vim-mark
+    uri: https://github.com/inkarkat/vim-mark
+    version: master
+- git:
+    local-name: vim-ingo-library
+    uri: https://github.com/inkarkat/vim-ingo-library
+    version: master

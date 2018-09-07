@@ -304,6 +304,11 @@ endfunction
 "****************************************
 autocmd bufenter * if (winnr("$") == 1 && exists("b:Calendar")) | q | endif
 
+"****************************************
+            "vim-mark"
+"****************************************
+let g:mwDefaultHighlightingPalette = 'extended'
+
 set nu
 set hlsearch
 set noautoindent
