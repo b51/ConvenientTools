@@ -29,4 +29,3 @@ export ROS_IP=$ros_ip
 EOF
 
 source ~/.bashrc
-

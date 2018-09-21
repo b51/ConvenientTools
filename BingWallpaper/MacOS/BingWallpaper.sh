@@ -17,10 +17,10 @@ if [ ! -n "$findResult" ]; then
             tell every desktop to               \
                 set picture to \"$localpath\""
     osascript -e "display notification \"$filename Downloaded\" with title \"BingWallpaper\""
-    echo "$(date +"%Y-%m-%d %H:%M:%S") Downloaded $filename" 
+    echo "$(date +"%Y-%m-%d %H:%M:%S") Downloaded $filename"
     #echo "$(date +"%Y-%m-%d %H:%M:%S") Downloaded $filename" >> $log
 else
     #echo "$(date +"%Y-%m-%d %H:%M:%S") Exist" >> $log
-    echo "$(date +"%Y-%m-%d %H:%M:%S") Exist" 
+    echo "$(date +"%Y-%m-%d %H:%M:%S") Exist"
     exit 0
 fi

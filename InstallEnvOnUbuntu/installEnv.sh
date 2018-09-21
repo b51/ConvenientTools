@@ -100,4 +100,3 @@ sudo dpkg-reconfigure keyboard-configuration
 #    sleep 2
 #    send "\r"
 #END
-

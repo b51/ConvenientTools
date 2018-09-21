@@ -1289,7 +1289,7 @@
                 unregisterFileSelect();
                 registerCheckbox();
                 registerAllCheckbox();
-                registerFileSelect(); 
+                registerFileSelect();
             });
             var list_view = document.querySelector('.list-view');
             var grid_view = document.querySelector('.grid-view');
@@ -1409,7 +1409,7 @@
             } else if(val.length < 4) {
                 $('#dialog-err').text('验证码输入错误，请重新输入');
                 return;
-            } 
+            }
             var result = getDownloadLinkWithVCode(val);
             if(result.errno == -20){
                 vcodeDialog.close();
