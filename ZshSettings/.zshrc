@@ -113,13 +113,15 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export TERM=xterm-256color
 
-#alias ll='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
 
 bindkey -M menuselect '' .accept-line
 
-# You can use whatever you want as an alias, like for Mondays:
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
+## You can use whatever you want as an alias, like for Mondays:
+#eval $(thefuck --alias)
+#eval $(thefuck --alias FUCK)
+#
+#source /opt/ros/indigo/setup.zsh
