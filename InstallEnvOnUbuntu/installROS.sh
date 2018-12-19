@@ -29,3 +29,7 @@ export ROS_IP=$ros_ip
 EOF
 
 source ~/.bashrc
+
+### Use catkin with anaconda3 ###
+#conda install setuptools
+#pip install -U rosdep rosinstall_generator wstool rosinstall six vcstools
