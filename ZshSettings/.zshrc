@@ -76,6 +76,7 @@ plugins=(
   colorize
   tmux
   tmuxinator
+  autojump
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,8 +121,7 @@ alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "
 
 bindkey -M menuselect '' .accept-line
 
-## You can use whatever you want as an alias, like for Mondays:
-#eval $(thefuck --alias)
-#eval $(thefuck --alias FUCK)
-#
-#source /opt/ros/indigo/setup.zsh
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias)
+eval $(thefuck --alias FUCK)
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
