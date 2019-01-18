@@ -260,7 +260,7 @@ nmap <F2> :Ag! --noaffinity<space>
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 0
 "let g:syntastic_check_on_wq = 1
-"let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers = ['pyflakes']
 "nmap<F10> :SyntasticToggleMode<CR>
 
 "****************************************
@@ -324,7 +324,7 @@ colorscheme molokai
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
 
-let g:cm_server_python_interpreter='/usr/local/bin/python3'
+"let g:cm_server_python_interpreter='/usr/local/bin/python3'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting=0
 let g:ycm_add_preview_to_completeopt=0
