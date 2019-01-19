@@ -91,3 +91,23 @@
     local-name: vim-ingo-library
     uri: https://github.com/inkarkat/vim-ingo-library
     version: master
+- git:
+    local-name: tabular
+    uri: https://github.com/godlygeek/tabular
+    version: master
+- git:
+    local-name: vim-commentary
+    uri: https://github.com/tpope/vim-commentary
+    version: master
+- git:
+    local-name: vim-easymotion
+    uri: https://github.com/easymotion/vim-easymotion
+    version: master
+- git:
+    local-name: vim-repeat
+    uri: https://github.com/tpope/vim-repeat
+    version: master
+- git:
+    local-name: vim-surround
+    uri: https://github.com/tpope/vim-surround
+    version: master
