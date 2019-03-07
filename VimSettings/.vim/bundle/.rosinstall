@@ -111,3 +111,11 @@
     local-name: vim-surround
     uri: https://github.com/tpope/vim-surround
     version: master
+- git:
+    local-name: vim-maktaba
+    uri: https://github.com/google/vim-maktaba
+    version: master
+- git:
+    local-name: vim-codefmt
+    uri: https://github.com/google/vim-codefmt
+    version: master
