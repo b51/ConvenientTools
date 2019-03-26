@@ -9,3 +9,23 @@ After git clone, cp .vim and .vimrc to ~/
     cd YouCompleteMe
     python install.py --clang-completer
     sudo apt install clang-format
+
+## Usage
+Leader key == \
+
+### NerdTree
+    Open, :NERDTree
+
+### TagList
+    Open/Close, F8
+
+### MarkdownPreview
+    Open , F9 + o
+    Close, F9 + q
+
+### VimMark
+    Mark/Unmark, \ + m
+
+### GoogleCodefmt
+    Enable,  :AutoFormatBuffer
+    Disable, :NoAutoFormatBuffer
