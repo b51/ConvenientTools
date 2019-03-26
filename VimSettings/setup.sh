@@ -15,3 +15,4 @@ cd ~/.vim/bundle/
 cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done;
 cd YouCompleteMe
 python3 install.py --clang-completer
+sudo apt install clang-format
