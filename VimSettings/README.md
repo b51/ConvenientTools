@@ -8,3 +8,4 @@ After git clone, cp .vim and .vimrc to ~/
     cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done;
     cd YouCompleteMe
     python install.py --clang-completer
+    sudo apt install clang-format
