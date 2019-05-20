@@ -25,6 +25,14 @@ sudo apt update -y
 /bin/echo -e "\e[1;32mInstalling Tools.\e[0m"
 sudo apt install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags x11vnc tmux build-essential -y
 
+# Installing Chrome
+/bin/echo -e "\e[1;32mInstalling Chrome.\e[0m"
+sudo /bin/echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+wget https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo apt update -y
+sudo apt remove firefox -y
+sudo apt install google-chrome-stable -y
+
 # Installing Others
 /bin/echo -e "\e[1;32mInstalling Others.\e[0m"
 sudo apt install python-pip python-rosinstall python-rosinstall-generator python-catkin-tools python-wstool libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
