@@ -22,13 +22,14 @@ sudo apt-get install ros-kinetic-desktop -y
 sudo rosdep init
 rosdep update
 
-tee -a ~/.bashrc > /dev/null <<'EOF'
-source /opt/ros/kinetic/setup.bash
+tee -a ~/.zshrc > /dev/null <<'EOF'
+source /opt/ros/kinetic/setup.zsh
 ros_ip=`ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
 export ROS_IP=$ros_ip
 EOF
 
-source ~/.bashrc
+source ~/.zshrc
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools -y
 
 ### Use catkin with anaconda3 ###
 #conda install setuptools
