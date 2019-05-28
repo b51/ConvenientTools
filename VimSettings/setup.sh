@@ -16,3 +16,4 @@ cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --
 cd YouCompleteMe
 python3 install.py --clang-completer
 sudo apt install clang-format
+cp clang-format.setting ~/.clang-format
