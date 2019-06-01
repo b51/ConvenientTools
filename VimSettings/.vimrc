@@ -106,7 +106,7 @@ func SetHeader()
     call append(line(".")+11, "")
   endif
   "Goto end of file
-  autocmd BufNewFile * normal G
+  autocmd BufEnter * normal G
 endfunc
 
 func SetPythonHeader()
@@ -122,7 +122,7 @@ func SetPythonHeader()
   call append(line(".")+8, "\#")
   call append(line(".")+9, "\#########################################################################")
   call append(line(".")+10, "")
-  autocmd BufNewFile * normal G
+  autocmd BufEnter * normal G
 endfunc
 
 "****************************************
@@ -312,17 +312,17 @@ let g:mwDefaultHighlightingPalette = 'extended'
 "****************************************
             "google vim codefmt"
 "****************************************
-augroup autoformat_settings
-  autocmd FileType bzl AutoFormatBuffer buildifier
-  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-  autocmd FileType dart AutoFormatBuffer dartfmt
-  autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType gn AutoFormatBuffer gn
-  autocmd FileType html,css,json AutoFormatBuffer js-beautify
-  autocmd FileType java AutoFormatBuffer google-java-format
-  autocmd FileType python AutoFormatBuffer yapf
-  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
-augroup END
+"augroup autoformat_settings
+"  autocmd FileType bzl AutoFormatBuffer buildifier
+"  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+"  autocmd FileType dart AutoFormatBuffer dartfmt
+"  autocmd FileType go AutoFormatBuffer gofmt
+"  autocmd FileType gn AutoFormatBuffer gn
+"  autocmd FileType html,css,json AutoFormatBuffer js-beautify
+"  autocmd FileType java AutoFormatBuffer google-java-format
+"  autocmd FileType python AutoFormatBuffer yapf
+"  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+"augroup END
 
 set nu
 set hlsearch
