@@ -95,12 +95,13 @@ main() {
     sudo apt install python3-dev python3-pip python3-setuptools -y
   fi
   sudo pip3 install -i https://mirrors.aliyun.com/pypi/simple/ thefuck
+  sudo apt install autojump
 
-  env git clone https://github.com/wting/autojump || {
-    printf "Error: git clone of autojump repo failed\n"
-    exit 1
-  }
-  cd autojump & ./install.py
+  #env git clone https://github.com/wting/autojump || {
+  #  printf "Error: git clone of autojump repo failed\n"
+  #  exit 1
+  #}
+  #cd autojump && python3 install.py && cd - && rm -rf autojump
 
   # If this user's login shell is not already "zsh", attempt to switch.
   TEST_CURRENT_SHELL=$(basename "$SHELL")
