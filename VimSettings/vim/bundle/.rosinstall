@@ -119,3 +119,7 @@
     local-name: vim-codefmt
     uri: https://github.com/google/vim-codefmt
     version: master
+- git:
+    local-name: UltiSnips
+    uri: https://github.com/sirver/UltiSnips
+    version: master

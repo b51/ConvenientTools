@@ -324,6 +324,19 @@ let g:mwDefaultHighlightingPalette = 'extended'
 "  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 "augroup END
 
+"****************************************
+            "ultisnips"
+"****************************************
+let $snipath = $HOME."/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories = [$snipath]
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 set nu
 set hlsearch
 set noautoindent
