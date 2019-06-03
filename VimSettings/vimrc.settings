@@ -330,7 +330,7 @@ let g:mwDefaultHighlightingPalette = 'extended'
 let $snipath = $HOME."/.vim/ultisnips"
 let g:UltiSnipsSnippetDirectories = [$snipath]
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger="<c-i>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
