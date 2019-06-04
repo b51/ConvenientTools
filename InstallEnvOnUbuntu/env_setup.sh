@@ -37,7 +37,7 @@ sudo apt install google-chrome-stable -y
 
 # Installing Others
 /bin/echo -e "\e[1;32mInstalling Others.\e[0m"
-sudo apt install python-pip python-rosinstall python-rosinstall-generator python-catkin-tools python-wstool libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
+sudo apt install python-dev python3-dev python-pip python-rosinstall python-rosinstall-generator python-catkin-tools python-wstool libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
 
 sudo apt dist-upgrade -y
 
@@ -46,8 +46,8 @@ sudo apt dist-upgrade -y
 cd $DIRROOT
 cp -r VimSettings/.vim* $HOME
 cd $HOME/.vim/bundle/
-#wstool update
-cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
+wstool update -j8
+#cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
 cd dracula-theme && git remote add upstream https://github.com/dracula/vim && cd ..
 cd YouCompleteMe
 python3 install.py --clang-completer
