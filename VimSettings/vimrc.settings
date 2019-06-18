@@ -62,7 +62,7 @@ autocmd BufNewFile *.hpp,*.cpp,,*.cc,*.[ch],*.sh,*.java call SetHeader()
 let $author_name = "b51"
 let $author_email = "b51live@gmail.com"
 
-func SetHeader()
+function! SetHeader()
   "*.sh
   if &filetype == 'sh'
     call setline(1,"\#########################################################################")
@@ -106,10 +106,10 @@ func SetHeader()
     call append(line(".")+11, "")
   endif
   "Goto end of file
-  autocmd BufEnter * normal G
+  "autocmd BufEnter * normal G
 endfunc
 
-func SetPythonHeader()
+function! SetPythonHeader()
   call setline(1,"\#!/usr/bin/env python")
   call append(line("."), "\#########################################################################")
   call append(line(".")+1, "\#")
@@ -122,7 +122,7 @@ func SetPythonHeader()
   call append(line(".")+8, "\#")
   call append(line(".")+9, "\#########################################################################")
   call append(line(".")+10, "")
-  autocmd BufEnter * normal G
+  "autocmd BufEnter * normal G
 endfunc
 
 "****************************************
