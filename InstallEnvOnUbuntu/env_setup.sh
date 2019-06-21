@@ -45,7 +45,9 @@ EOF
 setting_vim() {
   printf "${YELLOW}Setting Vim.${NORMAL}\n"
   cd $DIRROOT
-  cp -r VimSettings/.vim* $HOME
+  cp VimSettings/vimrc.settings $HOME/.vimrc
+  cp -rf VimSettings/vim $HOME/.vim
+  cp VimSettings/clang-format.setting $HOME/.clang-format
   cd $HOME/.vim/bundle/
   wstool update -j8
   #cat .rosinstall | grep uri | awk '{print $2}' | while read line; do git clone --recursive $line; done; #Can use this instead of wstool
