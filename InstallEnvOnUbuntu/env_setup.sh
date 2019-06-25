@@ -26,7 +26,7 @@ remove_useless() {
 # Installing Tools
 install_libs() {
   printf "${BLUE}Installing Tools.${NORMAL}\n"
-  sudo apt install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags tmux build-essential python-dev python3-dev python-pip python-rosinstall python-rosinstall-generator python-catkin-tools python-wstool libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
+  sudo apt install ssh cmake vim git tree htop silversearcher-ag exuberant-ctags tmux clang-format build-essential python-dev python3-dev python-pip python-wstool libgoogle-glog-dev libprotobuf-dev libleveldb-dev -y
   sudo apt dist-upgrade -y
 }
 
