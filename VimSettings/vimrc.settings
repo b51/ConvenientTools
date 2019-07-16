@@ -355,10 +355,21 @@ set ruler
 syntax enable
 syntax on
 
-"colorscheme delek
-"colorscheme dracula
+"****************************************
+            "colorscheme"
+"****************************************
+"------ solarized ------
+"set background=dark
+"let g:solarized_termcolors=256
 "colorscheme solarized
+
+"------ dracula ------
+"let g:dracula_colorterm = 0
+"colorscheme dracula
+
+"------ molokai ------
 colorscheme molokai
+"colorscheme gruvbox
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
