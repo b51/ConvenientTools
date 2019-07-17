@@ -97,6 +97,12 @@ main() {
   sudo pip3 install -i https://mirrors.aliyun.com/pypi/simple/ thefuck
   sudo apt install autojump
 
+  printf "${BLUE}Installing zsh-iterm-touchbar${NORMAL}\n"
+  env git clone https://github.com/robbyrussell/oh-my-zsh.git "${ZSH_CUSTOM1:-$ZSH/custom}/plugins" || {
+    printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
+    exit 1
+  }
+
   #env git clone https://github.com/wting/autojump || {
   #  printf "Error: git clone of autojump repo failed\n"
   #  exit 1
