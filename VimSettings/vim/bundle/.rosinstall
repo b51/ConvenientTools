@@ -123,3 +123,7 @@
     local-name: UltiSnips
     uri: https://github.com/sirver/UltiSnips
     version: master
+- git:
+    local-name: vim-lua-format
+    uri: https://github.com/andrejlevkovitch/vim-lua-format
+    version: master
