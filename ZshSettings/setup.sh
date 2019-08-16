@@ -98,7 +98,7 @@ main() {
   sudo apt install autojump
 
   printf "${BLUE}Installing zsh-iterm-touchbar${NORMAL}\n"
-  env git clone https://github.com/robbyrussell/oh-my-zsh.git "${ZSH_CUSTOM1:-$ZSH/custom}/plugins" || {
+  env git clone https://github.com/iam4x/zsh-iterm-touchbar.git "${ZSH_CUSTOM1:-$ZSH/custom}/plugins/zsh-iterm-touchbar" || {
     printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
     exit 1
   }
