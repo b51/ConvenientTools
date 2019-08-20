@@ -102,6 +102,11 @@ main() {
     printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
     exit 1
   }
+  printf "${BLUE}Installing zsh-iterm-touchbar${NORMAL}\n"
+  env git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-autosuggestions" || {
+    printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
+    exit 1
+  }
 
   #env git clone https://github.com/wting/autojump || {
   #  printf "Error: git clone of autojump repo failed\n"

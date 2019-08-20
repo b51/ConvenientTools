@@ -333,14 +333,13 @@ let g:UltiSnipsSnippetDirectories = [$snipath]
 let g:UltiSnipsExpandTrigger="<c-m>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
 "****************************************
             "YouCompleteMe"
 "****************************************
-"let g:cm_server_python_interpreter='/usr/local/bin/python3'
+let g:cm_server_python_interpreter='/usr/local/bin/python3'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting=0
 let g:ycm_add_preview_to_completeopt=0
@@ -356,6 +355,11 @@ syntax enable
 syntax on
 
 "****************************************
+               "fzf"
+"****************************************
+set rtp+=/usr/local/opt/fzf
+
+"****************************************
             "colorscheme"
 "****************************************
 "------ solarized ------
@@ -369,7 +373,6 @@ syntax on
 
 "------ molokai ------
 colorscheme molokai
-"colorscheme gruvbox
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor

@@ -127,3 +127,7 @@
     local-name: vim-lua-format
     uri: https://github.com/andrejlevkovitch/vim-lua-format
     version: master
+- git:
+    local-name: fzf.vim
+    uri: https://github.com/junegunn/fzf.vim
+    version: master

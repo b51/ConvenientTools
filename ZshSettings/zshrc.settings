@@ -78,6 +78,7 @@ plugins=(
   tmuxinator
   autojump
   zsh-iterm-touchbar
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,12 +116,13 @@ export LANG=C
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export TERM=xterm-256color
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
-# alias python='python3'
+#alias python='python3'
 
 bindkey -M menuselect '' .accept-line
 
