@@ -82,3 +82,5 @@ lib64/
 *.egg
 
 *.swp
+tags
+cscope*
