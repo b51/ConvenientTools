@@ -89,7 +89,8 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export LANG=C
+# export LANG=C
+export LANG_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -121,7 +122,7 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
+alias csfiles='find `pwd`/ -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.cu" -o -name "*.cuh" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files'
 #alias python='python3'
 
 bindkey -M menuselect '' .accept-line
@@ -130,3 +131,7 @@ bindkey -M menuselect '' .accept-line
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export GLFW_IM_MODULE=ibus
