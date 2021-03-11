@@ -6,7 +6,21 @@
 [merge]
 	tool = vimdiff
 [core]
-	editor = vim
+	editor = nvim
+[pull]
+	rebase = false
 
 [url "ssh://git@gitlab.xxx.com"]
   insteadOf = https://xx.xxx.xxx.xxx
+
+[merge]
+	tool = nvimdiff
+    conflictstyle = diff3
+[mergetool "vim_mergetool"]
+    cmd = nvim -f -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+    trustExitCode = true
+
+[mergetool "nvimdiff"]
+	keepBackup = false
+[mergetool "nvimdiff"]
+	cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
