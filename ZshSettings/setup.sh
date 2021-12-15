@@ -97,14 +97,19 @@ main() {
   sudo pip3 install -i https://mirrors.aliyun.com/pypi/simple/ thefuck
   sudo apt install autojump
 
-  printf "${BLUE}Installing zsh-iterm-touchbar${NORMAL}\n"
-  env git clone https://github.com/iam4x/zsh-iterm-touchbar.git "${ZSH_CUSTOM1:-$ZSH/custom}/plugins/zsh-iterm-touchbar" || {
-    printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
+  # printf "${BLUE}Installing zsh-iterm-touchbar${NORMAL}\n"
+  # env git clone https://github.com/iam4x/zsh-iterm-touchbar.git "${ZSH_CUSTOM1:-$ZSH/custom}/plugins/zsh-iterm-touchbar" || {
+  #   printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
+  #   exit 1
+  # }
+  printf "${BLUE}Installing zsh-autosuggestions${NORMAL}\n"
+  env git clone https://gitee.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-autosuggestions" || {
+    printf "Error: git clone of zsh-autosuggestions repo failed\n"
     exit 1
   }
-  printf "${BLUE}Installing zsh-iterm-touchbar${NORMAL}\n"
-  env git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-autosuggestions" || {
-    printf "Error: git clone of zsh-iterm-touchbar repo failed\n"
+  printf "${BLUE}Installing p10k${NORMAL}\n"
+  env git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$ZSH/custom}/themes/powerlevel10k" || {
+    printf "Error: git clone of p10k repo failed\n"
     exit 1
   }
 
