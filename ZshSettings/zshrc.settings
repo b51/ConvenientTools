@@ -76,7 +76,7 @@ plugins=(
   git
   bundler
   dotenv
-  osx
+  macos
   rake
   rbenv
   ruby
@@ -133,11 +133,13 @@ alias la='ls -A'
 alias l='ls -CF'
 alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files.out'
 #alias python='python3'
+alias lnlatest='[ -d latest ] && rm latest; ln -s $(ls -td -- * | head -n 1) latest'
 
 alias vim="nvim"
 alias vi="nvim"
 alias vimdiff="nvim -d"
-# alias oldvim="vim"
+alias icat="kitty +kitten icat"
+set -o nonomatch
 
 bindkey -M menuselect '' .accept-line
 
