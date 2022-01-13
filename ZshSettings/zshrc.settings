@@ -151,5 +151,11 @@ eval $(thefuck --alias FUCK)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GLFW_IM_MODULE=ibus
+
+if [[ -z $TMUX ]]; then # Avoid duplicate export PATH in tmux
+  export PATH=/home/b51/.local/bin:/home/b51/.BCloud/bin:$PATH
+  export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
