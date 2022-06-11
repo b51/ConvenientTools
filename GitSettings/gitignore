@@ -81,6 +81,7 @@ lib64/
 .installed.cfg
 *.egg
 
+.cache/
 *.swp
 tags
 cscope*
