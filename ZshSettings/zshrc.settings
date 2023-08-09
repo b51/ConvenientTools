@@ -131,9 +131,11 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias csfiles='find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" > cscope.files.out'
+alias csfiles='find `pwd`/ \( -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.cu" -o -name "*.cuh" -o -name "*.m" -o -name "*.mm" -o -name "*.java" -o -name "*.py" \) -not -path "*/.ccls-cache/*" > cscope.files.out'
 #alias python='python3'
-alias lnlatest='[ -d latest ] && rm latest; ln -s $(ls -td -- * | head -n 1) latest'
+alias lnlatest='[ -L latest ] && rm latest; ln -s $(ls -td -- * | head -n 1) latest'
+alias mkdate='mkdir $(date +%Y.%m.%d)'
+alias mkfulldate='mkdir $(date +%Y-%m-%d-%H-%M)_BJ'
 
 alias vim="nvim"
 alias vi="nvim"
