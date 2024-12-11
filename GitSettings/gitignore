@@ -85,3 +85,4 @@ lib64/
 *.swp
 tags
 cscope*
+.ccls-cache/
